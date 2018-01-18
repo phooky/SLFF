@@ -87,7 +87,7 @@ def vecproc_run(pc, stack = []):
             break
         elif op == 7: # JMP
             jaddr = ((data[pc] & 0x1f) << 8) | data[pc+1]
-            print("Jump to {:04x}".format(jaddr))
+            #print("Jump to {:04x}".format(jaddr))
             pc += 2
             break
     #print("Path '{}'".format(glyph_path))
@@ -96,7 +96,6 @@ def vecproc_run(pc, stack = []):
 
 import slff
 font = slff.SLFF(name="Tempest")
-
 for (ch, idx, count) in glyph_spans:
     pc = idx
     for i in range(count):
@@ -105,9 +104,6 @@ for (ch, idx, count) in glyph_spans:
         font.add_glyph(newch,path)
 
 font.add_glyph('0',font.glyph_map['O'].path)
-g = list(font.glyph_map.items())
-g.sort()
-for (ch, glyph) in g:
-    print(f'<glyph symbol="{ch}" path="{glyph.path}" bounds="{glyph.bounds}" />')
+font.save(sys.stdout)
 
 

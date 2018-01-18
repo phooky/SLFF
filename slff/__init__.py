@@ -1,7 +1,6 @@
 import xml.dom.minidom
-
 def path_bounds(path):
-    "Return the bounding box of the glyph as a tuple (left, top, right, bottom)."
+    "Return the bounding box of the path as a tuple (left, top, right, bottom)."
     bounds = (0,0,0,0)
     path = path.replace(","," ").strip()
     cx, cy = 0,0
@@ -18,18 +17,26 @@ def path_bounds(path):
         right = max(bounds[2],x)
         bottom = min(bounds[3],y)
         return (left,top,right,bottom)
+    def fix(cur_val,rel,val):
+        if rel:
+            return cur_val + val
+        else:
+            return val
     while path:
         opcode, args, path = get_op(path)
-        if opcode in 'ml':
+        rel = opcode.islower()
+        opcode = opcode.upper()
+        if opcode in 'ML':
             while args:
-                cx += args.pop(0)
-                cy += args.pop(0)
+                cx = fix(cx,rel,args.pop(0))
+                cy = fix(cy,rel,args.pop(0))
                 bounds = add_to_bounds(bounds, cx, cy)
-        elif opcode in 'ML':
-            while args:
-                cx = args.pop(0)
-                cy = args.pop(0)
-                bounds = add_to_bounds(bounds, cx, cy)
+        elif opcode == 'H':
+            cx = fix(cx,rel,args.pop(0))
+            bounds = add_to_bounds(bounds, cx, cy)
+        elif opcode == 'V':
+            cy = fix(cy,rel,args.pop(0))
+            bounds = add_to_bounds(bounds, cx, cy)
     return bounds
 
 
