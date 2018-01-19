@@ -1,42 +1,50 @@
 import xml.dom.minidom
+
+class ParsedOp:
+    def __init__(self, path_seg):
+        self.code = path_seg[0]
+        args = path_seg[1:].strip().split()
+        self.args = list(map(float,args))
+
+def parsePath(path):
+    ops = []
+    path = path.replace(',',' ').strip()
+    op = path[0]
+    for c in path[1:]:
+        if c.isalpha():
+            ops.append(ParsedOp(op))
+            op = c
+        else:
+            op += c
+    ops.append(ParsedOp(op))
+    return ops
+
 def path_bounds(path):
     "Return the bounding box of the path as a tuple (left, top, right, bottom)."
     bounds = (0,0,0,0)
     path = path.replace(","," ").strip()
     cx, cy = 0,0
-    def get_op(path):
-        opcode = path[0]
-        idx = 1
-        while idx < len(path) and not path[idx].isalpha():
-            idx += 1
-        args = list(map(float,path[1:idx].strip().split()))
-        return (opcode, args, path[idx:])
     def add_to_bounds(bounds,x,y):
         left = min(bounds[0],x)
         top = max(bounds[1],y)
         right = max(bounds[2],x)
         bottom = min(bounds[3],y)
         return (left,top,right,bottom)
-    def fix(cur_val,rel,val):
-        if rel:
-            return cur_val + val
-        else:
-            return val
-    while path:
-        opcode, args, path = get_op(path)
-        rel = opcode.islower()
-        opcode = opcode.upper()
-        if opcode in 'ML':
+    for op in parsePath(path):
+        assert op.code.islower()
+        args = op.args
+        if op.code in 'ml':
             while args:
-                cx = fix(cx,rel,args.pop(0))
-                cy = fix(cy,rel,args.pop(0))
+                cx += args.pop(0)
+                cy += args.pop(0)
                 bounds = add_to_bounds(bounds, cx, cy)
-        elif opcode == 'H':
-            cx = fix(cx,rel,args.pop(0))
+        elif op.code == 'h':
+            cx += args.pop(0)
             bounds = add_to_bounds(bounds, cx, cy)
-        elif opcode == 'V':
-            cy = fix(cy,rel,args.pop(0))
-            bounds = add_to_bounds(bounds, cx, cy)
+        elif opcode == 'v':
+            cy += args.pop(0)
+        assert len(args) == 0
+        bounds = add_to_bounds(bounds, cx, cy)
     return bounds
 
 
@@ -99,4 +107,7 @@ class SLFF:
             slff.appendChild(gnode)
         doc.appendChild(slff)
         return doc
+
+    def string_to_svg_path(self,s):
+        return " ".join(map(lambda x:self.glyph_map[x].path,s))
 

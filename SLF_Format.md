@@ -9,9 +9,11 @@ format from which other forms can be generated (DXF, HPGL, TTF, etc).
 * Y=0 is the baseline.
 * X=0 is the left edge of the character cell.
 * Units should be the native unit of the font source. Do not scale if possible.
-* Paths are in SVG Path format. All paths should be in relative format. At the 
+* Paths are in SVG Path format. All paths must be in relative format. At the 
   end of the path, the current position should be set to the start of the next
   character.
+  * Keep in mind that the path will be inverted wrt ordinary SVG files. We're
+    merely using the format to keep from having to start from scratch.
 * The top-level slf-font object should define "cell-width" and "cell-height" in
   in terms of native units. These should describe the maximum width and height of
   ordinary character data. If the baseline is not at the bottom of the cells, the
@@ -21,6 +23,7 @@ format from which other forms can be generated (DXF, HPGL, TTF, etc).
     of a few basic characters.
   * Most of these characteristics should be auto-extracted, in fact.
 * Individual characters can define their own "cell-width" for variable-width fonts.
+* The SPACE character should be defined as a move.
 ## Quick example
 
 ```<slf-font version="1.0" name="Tempest" encoding="utf-8" cell-width="12" cell-height="12">
