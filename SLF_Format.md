@@ -1,6 +1,6 @@
 # A Single-Line Font Format
 
-SLFF is a simple format for representing single-line fonts, as used by CNC
+SLFF is a simple XML-based format for representing single-line fonts, as used by CNC
 machines, plotters, vector displays, and similar devices. It's a simple XML
 format based on SVG's path descriptors. It's intended to be an intermediate
 format from which other forms can be generated (DXF, HPGL, TTF, etc).
@@ -44,14 +44,11 @@ SLFF paths are defined as a the subset of SVG path commands that correspond to r
 than absolute, motion. Most SLFF paths will consist entirely of the `m` (relative move to) and
 `l` (relative line to) commands.
 
-* The top-level slf-font object should define "cell-width" and "cell-height" in
-  in terms of native units. These should describe the maximum width and height of
-  ordinary character data. If the baseline is not at the bottom of the cells, the
-  "descent" attribute should indicate how many native units the baseline is above
-  the bottom of the cell.
-  * In general it should be possible to work out the baseline by examining the extents
-    of a few basic characters.
-  * Most of these characteristics should be auto-extracted, in fact.
+## Optional atributes
+
+* cell-height
+* cell-width
+* line-height
 
 ## Quick example
 
