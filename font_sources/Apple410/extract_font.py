@@ -6,9 +6,6 @@ Extract the Apple 410 font as an SLFF.
 import sys
 import math
 
-print("TODO: fix endpoint of paths (and ensure space advances properly)")
-sys.exit(1)
-
 alpha_ft_start = 0x2569
 point_ft_start = 0x3153
 
@@ -44,7 +41,7 @@ def unpack_byte(b):
 def unpack_coords(b):
     "convert two 4-bit signed packed numbers to cairo coordinates"
     (x,y) = unpack_byte(b)
-    return (x, (8 - y))
+    return (x, y)
 
 class PathBuilder:
     def __init__(self):
@@ -71,11 +68,14 @@ def build_char_path(ft, offset):
                 pb.add_op('m',dx,dy)
             elif cn == 2:
                 pb.add_op('l',dx,dy)
+    if (cx, cy) != (10,0):
+        dx,dy = 10-cx,0-cy
+        pb.add_op('m',dx,dy)
     return pb.path
 
 import slff
 font = slff.SLFF(name="Apple410")
-off = 1
+off = 0
 while not eot(alpha_ft_start, off):
     p = build_char_path(alpha_ft_start,off)
     c = chr(0x20 + off)
