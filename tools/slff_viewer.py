@@ -4,18 +4,20 @@ A tool for quickly verifying an SLFF font.
 """
 
 import sys
+import math
+
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk
 import cairo
-import slff
-import math
+
+from slff import SLFF, parse_path
 
 if len(sys.argv) < 2:
     print("Missing name of SLFF file.")
     sys.exit(1)
 
-font = slff.SLFF(sys.argv[1])
+font = SLFF(sys.argv[1])
 
 sz = (600,500)
 chsz = (20,20)
@@ -35,7 +37,7 @@ def OnDraw(w, cr):
         cr.translate(x*chsz[0],(y+1)*chsz[1])
         cr.scale(1.,-1.)
         cr.move_to(0,0)
-        ops = slff.parsePath(gl.path)
+        ops = parse_path(gl.path)
         for op in ops:
             if op.code == 'm':
                 cr.rel_move_to(op.args[0],op.args[1])

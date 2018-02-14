@@ -2,18 +2,23 @@ import xml.dom.minidom
 
 
 class Op:
+    "Describe an SVG path element."
+
     def __init__(self, code, args):
+        "Create a new SVG path element."
         self.code = code
         self.args = args
 
     def parse(path_seg):
+        "Create a new SVG path element from its string representation."
         code = path_seg[0]
         args = path_seg[1:].strip().split()
         args = list(map(float,args))
         return Op(code,args)
 
 
-def parsePath(path):
+def parse_path(path):
+    "Parse an SVG path into a list of Op objects."
     ops = []
     path = path.replace(',',' ').strip()
     op = path[0]
@@ -26,15 +31,16 @@ def parsePath(path):
     ops.append(Op.parse(op))
     return ops
 
+
 def path_bounds(path):
-    "Return the bounding box of the path as a tuple (left, top, right, bottom)."
+    "Return a bounding box of a path as the tuple (left, top, right, bottom)."
     bounds = (0,0,0,0)
-    path = path.replace(","," ").strip()
+    path = path.replace(',',' ').strip()
     cx, cy = 0,0
     def add_to_bounds(bounds,x,y):
         return (min(bounds[0],x), max(bounds[1],y), 
                 max(bounds[2],x), min(bounds[3],y))
-    for op in parsePath(path):
+    for op in parse_path(path):
         assert op.code.islower()
         args = op.args
         if op.code in 'ml':
@@ -51,27 +57,37 @@ def path_bounds(path):
         bounds = add_to_bounds(bounds, cx, cy)
     return bounds
 
+
 class PathBuilder:
+    "Construct an SVG path string from a sequence of drawing commands."
+
     def __init__(self):
         self.cur_pos = (0,0)
         self.ops = []
+
     def rel_move_to(self, dx, dy):
-        self.ops.append(Op('m',[dx,dy]))
+        self.ops.append(Op('m', [dx, dy]))
         self.cur_pos = (self.cur_pos[0] + dx, self.cur_pos[1] + dy)
+
     def move_to(self,x,y):
-        self.rel_move_to(self,x-cur_pos[0],y-cur_pos[1])
+        self.rel_move_to(self, x-cur_pos[0], y-cur_pos[1])
+
     def rel_line_to(self, dx, dy):
         if self.ops and self.ops[-1].code == 'l':
-            self.ops[-1].args.extend([dx,dy])
+            self.ops[-1].args.extend([dx, dy])
         else:
-            self.ops.append(Op('l',[dx,dy]))
+            self.ops.append(Op('l', [dx, dy]))
         self.cur_pos = (self.cur_pos[0] + dx, self.cur_pos[1] + dy)
+
     def __str__(self):
-        return "".join(map(lambda o: o.code + " ".join(map(str,o.args)),self.ops))
+        return "".join(map(lambda o: o.code + " ".join(map(str,o.args)),
+                           self.ops))
 
 
 class SLFF:
+
     class Glyph:
+
         def __init__(self, path = None, xml = None):
             self.width = None
             if xml:
