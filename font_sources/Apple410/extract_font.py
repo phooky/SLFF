@@ -5,11 +5,16 @@ Extract the Apple 410 font as an SLFF.
 
 import sys
 import math
+import os
+
+from slff import SLFF, PathBuilder
 
 alpha_ft_start = 0x2569
 point_ft_start = 0x3153
 
-f = open("ROM.bin","rb")
+directory = os.path.dirname(__file__)
+path = os.path.join(directory, "ROM.bin")
+f = open(path, "rb")
 data = f.read()
 
 
@@ -43,38 +48,25 @@ def unpack_coords(b):
     (x,y) = unpack_byte(b)
     return (x, y)
 
-class PathBuilder:
-    def __init__(self):
-        self.op = "" 
-        self.path = ""
-    def add_op(self,op,x,y):
-        if self.op != op:
-            self.path += op
-            self.op = op
-        self.path += f"{x} {y} "
 
 def build_char_path(ft, offset):
     d = list(get_char(ft, offset))
     pb = PathBuilder()
-    cx, cy = 0, 0
+    x,y = 0,0
     while d:
         cmd = d.pop(0)
         cn, ca = cmd >> 4, cmd % 16
         for _ in range(ca):
             (x,y) = unpack_coords(d.pop(0))
-            dx,dy = x-cx,y-cy
-            cx,cy = x,y
             if cn == 0:
-                pb.add_op('m',dx,dy)
+                pb.move_to(x,y)
             elif cn == 2:
-                pb.add_op('l',dx,dy)
-    if (cx, cy) != (10,0):
-        dx,dy = 10-cx,0-cy
-        pb.add_op('m',dx,dy)
-    return pb.path
+                pb.line_to(x,y)
+    if (x, y) != (10,0):
+        pb.move_to(10,0)
+    return str(pb)
 
-import slff
-font = slff.SLFF(name="Apple410")
+font = SLFF(name="Apple410")
 off = 0
 while not eot(alpha_ft_start, off):
     p = build_char_path(alpha_ft_start,off)

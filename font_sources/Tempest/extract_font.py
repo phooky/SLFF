@@ -5,10 +5,12 @@ Script for exploring the Tempest vector roms.
 
 import sys
 import math
+import os
 
 from slff import SLFF, PathBuilder
 
-path="136002-138.np3"
+directory = os.path.dirname(__file__)
+path = os.path.join(directory, "136002-138.np3")
 if len(sys.argv) > 1:
     path = sys.argv[1]
 f = open(path,"rb")

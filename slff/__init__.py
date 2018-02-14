@@ -70,7 +70,7 @@ class PathBuilder:
         self.cur_pos = (self.cur_pos[0] + dx, self.cur_pos[1] + dy)
 
     def move_to(self,x,y):
-        self.rel_move_to(self, x-cur_pos[0], y-cur_pos[1])
+        self.rel_move_to(x-self.cur_pos[0], y-self.cur_pos[1])
 
     def rel_line_to(self, dx, dy):
         if self.ops and self.ops[-1].code == 'l':
@@ -78,6 +78,9 @@ class PathBuilder:
         else:
             self.ops.append(Op('l', [dx, dy]))
         self.cur_pos = (self.cur_pos[0] + dx, self.cur_pos[1] + dy)
+    
+    def line_to(self,x,y):
+        self.rel_line_to(x-self.cur_pos[0], y-self.cur_pos[1])
 
     def __str__(self):
         return "".join(map(lambda o: o.code + " ".join(map(str,o.args)),
