@@ -1,43 +1,43 @@
 <?xml version="1.0" ?>
 <slff name="Tempest">
-    <glyph path="l0 8 4 4 4 -4 0 -8 m-8 4 l8 0 m4 -4" symbol="A"/>
-    <glyph path="l0 12 6 0 2 -2 0 -2 -2 -2 -6 0 m6 0 l2 -2 0 -2 -2 -2 -6 0 m12 0" symbol="B"/>
-    <glyph path="l0 12 8 0 m-8 -12 l8 0 m4 0" symbol="C"/>
-    <glyph path="l0 12 4 0 4 -4 0 -4 -4 -4 -4 0 m12 0" symbol="D"/>
-    <glyph path="l0 12 8 0 m-2 -6 l-6 0 m0 -6 l8 0 m4 0" symbol="E"/>
-    <glyph path="l0 12 8 0 m-2 -6 l-6 0 m0 -6 12 0" symbol="F"/>
-    <glyph path="l0 12 8 0 0 -4 m-4 -4 l4 0 0 -4 -8 0 m12 0" symbol="G"/>
-    <glyph path="l0 12 m0 -6 l8 0 m0 6 l0 -12 m4 0" symbol="H"/>
-    <glyph path="l8 0 m-4 0 l0 12 m4 0 l-8 0 m12 -12" symbol="I"/>
-    <glyph path="m0 4 l4 -4 4 0 0 12 m4 -12" symbol="J"/>
-    <glyph path="l0 12 m6 0 l-6 -6 6 -6 m6 0" symbol="K"/>
-    <glyph path="m0 12 l0 -12 8 0 m4 0" symbol="L"/>
-    <glyph path="l0 12 4 -4 4 4 0 -12 m4 0" symbol="M"/>
-    <glyph path="l0 12 8 -12 0 12 m4 -12" symbol="N"/>
-    <glyph path="l0 12 8 0 0 -12 -8 0 m12 0" symbol="O"/>
-    <glyph path="l0 12 8 0 0 -6 -8 0 m6 -6 6 0" symbol="P"/>
-    <glyph path="l0 12 8 0 0 -8 -4 -4 -4 0 m4 4 l4 -4 m4 0" symbol="Q"/>
-    <glyph path="l0 12 8 0 0 -6 -8 0 m2 0 l6 -6 m4 0" symbol="R"/>
-    <glyph path="l8 0 0 6 -8 0 0 6 8 0 m4 -12" symbol="S"/>
-    <glyph path="m4 0 l0 12 m-4 0 l8 0 m4 -12" symbol="T"/>
-    <glyph path="m0 12 l0 -12 8 0 0 12 m4 -12" symbol="U"/>
-    <glyph path="m0 12 l4 -12 4 12 m4 -12" symbol="V"/>
-    <glyph path="m0 12 l0 -12 4 4 4 -4 0 12 m4 -12" symbol="W"/>
-    <glyph path="l8 12 m-8 0 l8 -12 m4 0" symbol="X"/>
-    <glyph path="m4 0 l0 8 -4 4 m8 0 l-4 -4 m8 -8" symbol="Y"/>
-    <glyph path="m0 12 l8 0 -8 -12 8 0 m4 0" symbol="Z"/>
+    <glyph path="l0 8 4 4 4 -4 0 -8m-8 4l8 0m4 -4" symbol="A"/>
+    <glyph path="l0 12 6 0 2 -2 0 -2 -2 -2 -6 0m6 0l2 -2 0 -2 -2 -2 -6 0m12 0" symbol="B"/>
+    <glyph path="l0 12 8 0m-8 -12l8 0m4 0" symbol="C"/>
+    <glyph path="l0 12 4 0 4 -4 0 -4 -4 -4 -4 0m12 0" symbol="D"/>
+    <glyph path="l0 12 8 0m-2 -6l-6 0m0 -6l8 0m4 0" symbol="E"/>
+    <glyph path="l0 12 8 0m-2 -6l-6 0m0 -6m12 0" symbol="F"/>
+    <glyph path="l0 12 8 0 0 -4m-4 -4l4 0 0 -4 -8 0m12 0" symbol="G"/>
+    <glyph path="l0 12m0 -6l8 0m0 6l0 -12m4 0" symbol="H"/>
+    <glyph path="l8 0m-4 0l0 12m4 0l-8 0m12 -12" symbol="I"/>
+    <glyph path="m0 4l4 -4 4 0 0 12m4 -12" symbol="J"/>
+    <glyph path="l0 12m6 0l-6 -6 6 -6m6 0" symbol="K"/>
+    <glyph path="m0 12l0 -12 8 0m4 0" symbol="L"/>
+    <glyph path="l0 12 4 -4 4 4 0 -12m4 0" symbol="M"/>
+    <glyph path="l0 12 8 -12 0 12m4 -12" symbol="N"/>
+    <glyph path="l0 12 8 0 0 -12 -8 0m12 0" symbol="O"/>
+    <glyph path="l0 12 8 0 0 -6 -8 0m6 -6m6 0" symbol="P"/>
+    <glyph path="l0 12 8 0 0 -8 -4 -4 -4 0m4 4l4 -4m4 0" symbol="Q"/>
+    <glyph path="l0 12 8 0 0 -6 -8 0m2 0l6 -6m4 0" symbol="R"/>
+    <glyph path="l8 0 0 6 -8 0 0 6 8 0m4 -12" symbol="S"/>
+    <glyph path="m4 0l0 12m-4 0l8 0m4 -12" symbol="T"/>
+    <glyph path="m0 12l0 -12 8 0 0 12m4 -12" symbol="U"/>
+    <glyph path="m0 12l4 -12 4 12m4 -12" symbol="V"/>
+    <glyph path="m0 12l0 -12 4 4 4 -4 0 12m4 -12" symbol="W"/>
+    <glyph path="l8 12m-8 0l8 -12m4 0" symbol="X"/>
+    <glyph path="m4 0l0 8 -4 4m8 0l-4 -4m8 -8" symbol="Y"/>
+    <glyph path="m0 12l8 0 -8 -12 8 0m4 0" symbol="Z"/>
     <glyph path="m12 0" symbol=" "/>
-    <glyph path="m4 0 l0 12 m8 -12" symbol="1"/>
-    <glyph path="m0 12 l8 0 0 -6 -8 0 0 -6 8 0 m4 0" symbol="2"/>
-    <glyph path="l8 0 0 12 -8 0 m0 -6 l8 0 m4 -6" symbol="3"/>
-    <glyph path="m0 12 l0 -6 8 0 m0 6 l0 -12 m4 0" symbol="4"/>
-    <glyph path="l8 0 0 6 -8 0 0 6 8 0 m4 -12" symbol="5"/>
-    <glyph path="m0 6 l8 0 0 -6 -8 0 0 12 m12 -12" symbol="6"/>
-    <glyph path="m0 12 l8 0 0 -12 m4 0" symbol="7"/>
-    <glyph path="l8 0 0 12 -8 0 0 -12 m0 6 l8 0 m4 -6" symbol="8"/>
-    <glyph path="m8 0 l0 12 -8 0 0 -6 8 0 m4 -6" symbol="9"/>
-    <glyph path="m0 6 l8 0 m4 -6" symbol="-"/>
-    <glyph path="m0 2 l0 8 2 2 4 0 2 -2 0 -8 -2 -2 -4 0 -2 2 m6 2 l-4 0 0 4 4 0 m6 -8" symbol="©"/>
-    <glyph path="l8 12 m-7 -5" symbol="/"/>
-    <glyph path="l0 12 8 0 0 -12 -8 0 m12 0" symbol="0"/>
+    <glyph path="m4 0l0 12m8 -12" symbol="1"/>
+    <glyph path="m0 12l8 0 0 -6 -8 0 0 -6 8 0m4 0" symbol="2"/>
+    <glyph path="l8 0 0 12 -8 0m0 -6l8 0m4 -6" symbol="3"/>
+    <glyph path="m0 12l0 -6 8 0m0 6l0 -12m4 0" symbol="4"/>
+    <glyph path="l8 0 0 6 -8 0 0 6 8 0m4 -12" symbol="5"/>
+    <glyph path="m0 6l8 0 0 -6 -8 0 0 12m12 -12" symbol="6"/>
+    <glyph path="m0 12l8 0 0 -12m4 0" symbol="7"/>
+    <glyph path="l8 0 0 12 -8 0 0 -12m0 6l8 0m4 -6" symbol="8"/>
+    <glyph path="m8 0l0 12 -8 0 0 -6 8 0m4 -6" symbol="9"/>
+    <glyph path="m0 6l8 0m4 -6" symbol="-"/>
+    <glyph path="m0 2l0 8 2 2 4 0 2 -2 0 -8 -2 -2 -4 0 -2 2m6 2l-4 0 0 4 4 0m6 -8" symbol="©"/>
+    <glyph path="l8 12m-7 -5" symbol="/"/>
+    <glyph path="l0 12 8 0 0 -12 -8 0m12 0" symbol="0"/>
 </slff>

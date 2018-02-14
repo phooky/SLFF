@@ -6,6 +6,8 @@ Script for exploring the Tempest vector roms.
 import sys
 import math
 
+from slff import SLFF, PathBuilder
+
 path="136002-138.np3"
 if len(sys.argv) > 1:
     path = sys.argv[1]
@@ -23,17 +25,6 @@ glyph_spans = [('A',0,26),
         ('/',0x25c,1),
         ]
 
-
-class PathBuilder:
-    def __init__(self):
-        self.op = "" 
-        self.path = ""
-    def add_op(self,op,x,y):
-        if self.op != op:
-            self.path += op
-            self.op = op
-        self.path += f"{x} {y} "
-
 def vecproc_run(pc, stack = []):
     pb = PathBuilder()
     cur_op = -1
@@ -48,9 +39,9 @@ def vecproc_run(pc, stack = []):
             if data[pc+1] & 0x10:
                 xx = -(0x10 - xx)
             if zz == 0:
-                pb.add_op("m",xx,yy)
+                pb.rel_move_to(xx,yy)
             else:
-                pb.add_op("l",xx,yy)
+                pb.rel_line_to(xx,yy)
             pc += 2
         elif op == 0: #LDRAW
             yy = ((data[pc] & 0x1f) << 8) | data[pc+1]
@@ -61,9 +52,9 @@ def vecproc_run(pc, stack = []):
                 xx = -(0x2000 - xx)
             zz = (data[pc+2] >> 5) & 0x07
             if zz == 0:
-                pb.add_op("m",xx,yy)
+                pb.rel_move_to(xx,yy)
             else:
-                pb.add_op("l",xx,yy)
+                pb.rel_line_to(xx,yy)
             pc += 4
         elif op == 1: # HALT
             #print("HALT")
@@ -92,10 +83,9 @@ def vecproc_run(pc, stack = []):
             break
     #print("Path '{}'".format(glyph_path))
     #print("Cell size: {} x {}".format(cw,ch))
-    return (pb.path.strip(),pc)
+    return (str(pb).strip(),pc)
 
-import slff
-font = slff.SLFF(name="Tempest")
+font = SLFF(name="Tempest")
 for (ch, idx, count) in glyph_spans:
     pc = idx
     for i in range(count):

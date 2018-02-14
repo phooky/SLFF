@@ -1,10 +1,17 @@
 import xml.dom.minidom
 
-class ParsedOp:
-    def __init__(self, path_seg):
-        self.code = path_seg[0]
+
+class Op:
+    def __init__(self, code, args):
+        self.code = code
+        self.args = args
+
+    def parse(path_seg):
+        code = path_seg[0]
         args = path_seg[1:].strip().split()
-        self.args = list(map(float,args))
+        args = list(map(float,args))
+        return Op(code,args)
+
 
 def parsePath(path):
     ops = []
@@ -12,11 +19,11 @@ def parsePath(path):
     op = path[0]
     for c in path[1:]:
         if c.isalpha():
-            ops.append(ParsedOp(op))
+            ops.append(Op.parse(op))
             op = c
         else:
             op += c
-    ops.append(ParsedOp(op))
+    ops.append(Op.parse(op))
     return ops
 
 def path_bounds(path):
@@ -25,11 +32,8 @@ def path_bounds(path):
     path = path.replace(","," ").strip()
     cx, cy = 0,0
     def add_to_bounds(bounds,x,y):
-        left = min(bounds[0],x)
-        top = max(bounds[1],y)
-        right = max(bounds[2],x)
-        bottom = min(bounds[3],y)
-        return (left,top,right,bottom)
+        return (min(bounds[0],x), max(bounds[1],y), 
+                max(bounds[2],x), min(bounds[3],y))
     for op in parsePath(path):
         assert op.code.islower()
         args = op.args
@@ -47,6 +51,23 @@ def path_bounds(path):
         bounds = add_to_bounds(bounds, cx, cy)
     return bounds
 
+class PathBuilder:
+    def __init__(self):
+        self.cur_pos = (0,0)
+        self.ops = []
+    def rel_move_to(self, dx, dy):
+        self.ops.append(Op('m',[dx,dy]))
+        self.cur_pos = (self.cur_pos[0] + dx, self.cur_pos[1] + dy)
+    def move_to(self,x,y):
+        self.rel_move_to(self,x-cur_pos[0],y-cur_pos[1])
+    def rel_line_to(self, dx, dy):
+        if self.ops and self.ops[-1].code == 'l':
+            self.ops[-1].args.extend([dx,dy])
+        else:
+            self.ops.append(Op('l',[dx,dy]))
+        self.cur_pos = (self.cur_pos[0] + dx, self.cur_pos[1] + dy)
+    def __str__(self):
+        return "".join(map(lambda o: o.code + " ".join(map(str,o.args)),self.ops))
 
 
 class SLFF:
