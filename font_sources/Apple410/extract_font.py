@@ -14,6 +14,8 @@ point_ft_start = 0x3153
 
 directory = os.path.dirname(__file__)
 path = os.path.join(directory, "ROM.bin")
+outpath = os.path.join(directory, "Apple410.slff")
+
 f = open(path, "rb")
 data = f.read()
 

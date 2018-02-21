@@ -50,6 +50,9 @@ than absolute, motion. Most SLFF paths will consist entirely of the `m` (relativ
 * cell-width
 * line-height
 
+In interest of recording data-- is there any reason for a glyph not to retain (as in 
+hershey fonts) the midline information?
+
 ## Quick example
 
 ```<slf-font version="1.0" name="Tempest" encoding="utf-8" cell-width="12" cell-height="12">

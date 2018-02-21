@@ -11,6 +11,8 @@ from slff import SLFF, PathBuilder
 
 directory = os.path.dirname(__file__)
 path = os.path.join(directory, "136002-138.np3")
+outpath = os.path.join(directory,"Tempest.slff")
+
 if len(sys.argv) > 1:
     path = sys.argv[1]
 f = open(path,"rb")
@@ -96,6 +98,5 @@ for (ch, idx, count) in glyph_spans:
         font.add_glyph(newch,path)
 
 font.add_glyph('0',font.glyph_map['O'].path)
-font.save(sys.stdout)
-
+font.save(open(outpath,"w"))
 
