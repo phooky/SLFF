@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.1//EN'
+  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg>
+  <defs>
+    <font id="Tempest">
+      <font-face ascent="12.0" descent="0" font-family="Tempest" units-per-em="12.0"/>
+      <missing-glyph horiz-adv-x="12.0"/>
+      <glyph d="m0 0l0 8 4 4 4 -4 0 -8m-8 4l8 0m4 -4" horiz-adv-x="12.0" unicode="A"/>
+      <glyph d="m0 0l0 12 6 0 2 -2 0 -2 -2 -2 -6 0m6 0l2 -2 0 -2 -2 -2 -6 0m12 0" horiz-adv-x="12.0" unicode="B"/>
+      <glyph d="m0 0l0 12 8 0m-8 -12l8 0m4 0" horiz-adv-x="12.0" unicode="C"/>
+      <glyph d="m0 0l0 12 4 0 4 -4 0 -4 -4 -4 -4 0m12 0" horiz-adv-x="12.0" unicode="D"/>
+      <glyph d="m0 0l0 12 8 0m-2 -6l-6 0m0 -6l8 0m4 0" horiz-adv-x="12.0" unicode="E"/>
+      <glyph d="m0 0l0 12 8 0m-2 -6l-6 0m0 -6m12 0" horiz-adv-x="12.0" unicode="F"/>
+      <glyph d="m0 0l0 12 8 0 0 -4m-4 -4l4 0 0 -4 -8 0m12 0" horiz-adv-x="12.0" unicode="G"/>
+      <glyph d="m0 0l0 12m0 -6l8 0m0 6l0 -12m4 0" horiz-adv-x="12.0" unicode="H"/>
+      <glyph d="m0 0l8 0m-4 0l0 12m4 0l-8 0m12 -12" horiz-adv-x="12.0" unicode="I"/>
+      <glyph d="m0 4l4 -4 4 0 0 12m4 -12" horiz-adv-x="12.0" unicode="J"/>
+      <glyph d="m0 0l0 12m6 0l-6 -6 6 -6m6 0" horiz-adv-x="12.0" unicode="K"/>
+      <glyph d="m0 12l0 -12 8 0m4 0" horiz-adv-x="12.0" unicode="L"/>
+      <glyph d="m0 0l0 12 4 -4 4 4 0 -12m4 0" horiz-adv-x="12.0" unicode="M"/>
+      <glyph d="m0 0l0 12 8 -12 0 12m4 -12" horiz-adv-x="12.0" unicode="N"/>
+      <glyph d="m0 0l0 12 8 0 0 -12 -8 0m12 0" horiz-adv-x="12.0" unicode="O"/>
+      <glyph d="m0 0l0 12 8 0 0 -6 -8 0m6 -6m6 0" horiz-adv-x="12.0" unicode="P"/>
+      <glyph d="m0 0l0 12 8 0 0 -8 -4 -4 -4 0m4 4l4 -4m4 0" horiz-adv-x="12.0" unicode="Q"/>
+      <glyph d="m0 0l0 12 8 0 0 -6 -8 0m2 0l6 -6m4 0" horiz-adv-x="12.0" unicode="R"/>
+      <glyph d="m0 0l8 0 0 6 -8 0 0 6 8 0m4 -12" horiz-adv-x="12.0" unicode="S"/>
+      <glyph d="m4 0l0 12m-4 0l8 0m4 -12" horiz-adv-x="12.0" unicode="T"/>
+      <glyph d="m0 12l0 -12 8 0 0 12m4 -12" horiz-adv-x="12.0" unicode="U"/>
+      <glyph d="m0 12l4 -12 4 12m4 -12" horiz-adv-x="12.0" unicode="V"/>
+      <glyph d="m0 12l0 -12 4 4 4 -4 0 12m4 -12" horiz-adv-x="12.0" unicode="W"/>
+      <glyph d="m0 0l8 12m-8 0l8 -12m4 0" horiz-adv-x="12.0" unicode="X"/>
+      <glyph d="m4 0l0 8 -4 4m8 0l-4 -4m8 -8" horiz-adv-x="12.0" unicode="Y"/>
+      <glyph d="m0 12l8 0 -8 -12 8 0m4 0" horiz-adv-x="12.0" unicode="Z"/>
+      <glyph d="m12 0" horiz-adv-x="12.0" unicode=" "/>
+      <glyph d="m4 0l0 12m8 -12" horiz-adv-x="12.0" unicode="1"/>
+      <glyph d="m0 12l8 0 0 -6 -8 0 0 -6 8 0m4 0" horiz-adv-x="12.0" unicode="2"/>
+      <glyph d="m0 0l8 0 0 12 -8 0m0 -6l8 0m4 -6" horiz-adv-x="12.0" unicode="3"/>
+      <glyph d="m0 12l0 -6 8 0m0 6l0 -12m4 0" horiz-adv-x="12.0" unicode="4"/>
+      <glyph d="m0 0l8 0 0 6 -8 0 0 6 8 0m4 -12" horiz-adv-x="12.0" unicode="5"/>
+      <glyph d="m0 6l8 0 0 -6 -8 0 0 12m12 -12" horiz-adv-x="12.0" unicode="6"/>
+      <glyph d="m0 12l8 0 0 -12m4 0" horiz-adv-x="12.0" unicode="7"/>
+      <glyph d="m0 0l8 0 0 12 -8 0 0 -12m0 6l8 0m4 -6" horiz-adv-x="12.0" unicode="8"/>
+      <glyph d="m8 0l0 12 -8 0 0 -6 8 0m4 -6" horiz-adv-x="12.0" unicode="9"/>
+      <glyph d="m0 6l8 0m4 -6" horiz-adv-x="12.0" unicode="-"/>
+      <glyph d="m0 2l0 8 2 2 4 0 2 -2 0 -8 -2 -2 -4 0 -2 2m6 2l-4 0 0 4 4 0m6 -8" horiz-adv-x="12.0" unicode="©"/>
+      <glyph d="m0 0l8 12m-7 -5" horiz-adv-x="8.0" unicode="/"/>
+      <glyph d="m0 0l0 12 8 0 0 -12 -8 0m12 0" horiz-adv-x="12.0" unicode="0"/>
+    </font>
+  </defs>
+</svg>

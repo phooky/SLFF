@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.1//EN'
+  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg>
+  <defs>
+    <font id="Apple410">
+      <font-face ascent="8.0" descent="-4.0" font-family="Apple410" units-per-em="10.0"/>
+      <missing-glyph horiz-adv-x="10.0"/>
+      <glyph d="m10 0" horiz-adv-x="10.0" unicode=" "/>
+      <glyph d="m0 8l0 -6m0 -2l0 0m10 0" horiz-adv-x="10.0" unicode="!"/>
+      <glyph d="m2 8l0 -2m4 2l0 -2m4 -6" horiz-adv-x="10.0" unicode="&quot;"/>
+      <glyph d="m0 0l4 8m4 0l-4 -8m4 3l-8 0m0 2l8 0m2 -5" horiz-adv-x="10.0" unicode="#"/>
+      <glyph d="m0 2l2 -1 4 0 2 1 0 1 -2 1 -4 0 -2 1 0 1 2 1 4 0 2 -1m-4 2l0 -8m6 0" horiz-adv-x="10.0" unicode="$"/>
+      <glyph d="m4 7l-2 1 -2 -1 2 -1 2 1m4 1l-8 -8m4 1l2 -1 2 1 -2 1 -2 -1m6 -1" horiz-adv-x="10.0" unicode="%"/>
+      <glyph d="m8 2l-2 -2 -4 0 -2 1 0 2 6 3 0 1 -2 1 -2 0 -2 -1 0 -1 8 -6m2 0" horiz-adv-x="10.0" unicode="&amp;"/>
+      <glyph d="m4 8l-2 -2m8 -6" horiz-adv-x="10.0" unicode="'"/>
+      <glyph d="m8 8l-2 -1 -2 -2 0 -2 2 -2 2 -1m2 0" horiz-adv-x="10.0" unicode="("/>
+      <glyph d="m0 8l2 -1 2 -2 0 -2 -2 -2 -2 -1m10 0" horiz-adv-x="10.0" unicode=")"/>
+      <glyph d="m0 4l8 0 -4 0 2 2 -4 -4 2 2 -2 2 4 -4m4 -2" horiz-adv-x="10.0" unicode="*"/>
+      <glyph d="m0 4l8 0 -4 0 0 2 0 -4m6 -2" horiz-adv-x="10.0" unicode="+"/>
+      <glyph d="m2 0l-2 0 0 1 2 0 0 -1 -2 -1m10 1" horiz-adv-x="10.0" unicode=","/>
+      <glyph d="m0 4l8 0m2 -4" horiz-adv-x="10.0" unicode="-"/>
+      <glyph d="m0 0l0 1 2 0 0 -1 -2 0m10 0" horiz-adv-x="10.0" unicode="."/>
+      <glyph d="m0 0l8 8m2 -8" horiz-adv-x="10.0" unicode="/"/>
+      <glyph d="m2 0l-2 1 0 6 2 1 4 0 2 -1 0 -6 -2 -1 -4 0m8 0" horiz-adv-x="10.0" unicode="0"/>
+      <glyph d="m2 7l2 1 0 -8 -2 0 4 0m4 0" horiz-adv-x="10.0" unicode="1"/>
+      <glyph d="m0 7l2 1 4 0 2 -1 0 -2 -8 -3 0 -2 8 0m2 0" horiz-adv-x="10.0" unicode="2"/>
+      <glyph d="m0 7l2 1 4 0 2 -1 0 -2 -2 -1 -4 0 4 0 2 -1 0 -2 -2 -1 -4 0 -2 1m10 -1" horiz-adv-x="10.0" unicode="3"/>
+      <glyph d="m6 0l0 8 -6 -6 8 0m2 -2" horiz-adv-x="10.0" unicode="4"/>
+      <glyph d="m0 1l2 -1 4 0 2 1 0 3 -2 1 -6 0 0 3 8 0m2 -8" horiz-adv-x="10.0" unicode="5"/>
+      <glyph d="m0 4l2 1 4 0 2 -1 0 -3 -2 -1 -4 0 -2 1 0 6 2 1 4 0 2 -1m2 -7" horiz-adv-x="10.0" unicode="6"/>
+      <glyph d="m0 7l0 1 8 0 -6 -8m8 0" horiz-adv-x="10.0" unicode="7"/>
+      <glyph d="m2 4l-2 1 0 2 2 1 4 0 2 -1 0 -2 -2 -1 -4 0 -2 -1 0 -2 2 -1 4 0 2 1 0 2 -2 1m4 -4" horiz-adv-x="10.0" unicode="8"/>
+      <glyph d="m0 1l2 -1 4 0 2 1 0 6 -2 1 -4 0 -2 -1 0 -3 2 -1 4 0 2 1m2 -4" horiz-adv-x="10.0" unicode="9"/>
+      <glyph d="m0 3l2 0 0 1 -2 0 0 -1m0 -2l0 -1 2 0 0 1 -2 0m10 -1" horiz-adv-x="10.0" unicode=":"/>
+      <glyph d="m0 3l2 0 0 1 -2 0 0 -1m2 -3l-2 0 0 1 2 0 0 -1 -2 -1m10 1" horiz-adv-x="10.0" unicode=";"/>
+      <glyph d="m8 6l-8 -2 8 -2m2 -2" horiz-adv-x="10.0" unicode="&lt;"/>
+      <glyph d="m0 5l8 0m-8 -2l8 0m2 -3" horiz-adv-x="10.0" unicode="="/>
+      <glyph d="m0 6l8 -2 -8 -2m10 -2" horiz-adv-x="10.0" unicode="&gt;"/>
+      <glyph d="m0 7l2 1 4 0 2 -1 0 -2 -2 -1 -2 0 0 -2m0 -2l0 0m6 0" horiz-adv-x="10.0" unicode="?"/>
+      <glyph d="m6 3l-2 -1 -2 0 0 3 2 1 2 0 0 -4 2 1 0 4 -2 1 -4 0 -2 -1 0 -6 2 -1 4 0 2 1m2 -1" horiz-adv-x="10.0" unicode="@"/>
+      <glyph d="m0 0l4 8 2 -4 -4 0 4 0 2 -4m2 0" horiz-adv-x="10.0" unicode="A"/>
+      <glyph d="m0 0l0 8 6 0 2 -1 0 -2 -2 -1 -6 0 6 0 2 -1 0 -2 -2 -1 -6 0m10 0" horiz-adv-x="10.0" unicode="B"/>
+      <glyph d="m8 7l-2 1 -4 0 -2 -1 0 -6 2 -1 4 0 2 1m2 -1" horiz-adv-x="10.0" unicode="C"/>
+      <glyph d="m0 0l0 8 6 0 2 -1 0 -6 -2 -1 -6 0m10 0" horiz-adv-x="10.0" unicode="D"/>
+      <glyph d="m8 8l-8 0 0 -4 6 0 -6 0 0 -4 8 0m2 0" horiz-adv-x="10.0" unicode="E"/>
+      <glyph d="m0 0l0 4 6 0 -6 0 0 4 8 0m2 -8" horiz-adv-x="10.0" unicode="F"/>
+      <glyph d="m6 3l2 0 0 -2 -2 -1 -4 0 -2 1 0 6 2 1 4 0 2 -1m2 -7" horiz-adv-x="10.0" unicode="G"/>
+      <glyph d="m0 0l0 8 0 -4 8 0 0 4 0 -8m2 0" horiz-adv-x="10.0" unicode="H"/>
+      <glyph d="m2 0l4 0 -2 0 0 8 -2 0 4 0m4 -8" horiz-adv-x="10.0" unicode="I"/>
+      <glyph d="m0 1l2 -1 2 0 2 1 0 7 -2 0 4 0m2 -8" horiz-adv-x="10.0" unicode="J"/>
+      <glyph d="m0 8l0 -8 0 2 8 6 -4 -3 4 -5m2 0" horiz-adv-x="10.0" unicode="K"/>
+      <glyph d="m0 8l0 -8 8 0m2 0" horiz-adv-x="10.0" unicode="L"/>
+      <glyph d="m0 0l0 8 4 -6 4 6 0 -8m2 0" horiz-adv-x="10.0" unicode="M"/>
+      <glyph d="m0 0l0 8 8 -8 0 8m2 -8" horiz-adv-x="10.0" unicode="N"/>
+      <glyph d="m2 0l-2 1 0 6 2 1 4 0 2 -1 0 -6 -2 -1 -4 0m8 0" horiz-adv-x="10.0" unicode="O"/>
+      <glyph d="m0 0l0 8 6 0 2 -1 0 -2 -2 -1 -6 0m10 -4" horiz-adv-x="10.0" unicode="P"/>
+      <glyph d="m2 0l-2 1 0 6 2 1 4 0 2 -1 0 -6 -2 -1 -4 0m2 2l4 -2m2 0" horiz-adv-x="10.0" unicode="Q"/>
+      <glyph d="m0 0l0 8 6 0 2 -1 0 -2 -2 -1 -6 0 4 0 4 -4m2 0" horiz-adv-x="10.0" unicode="R"/>
+      <glyph d="m0 1l2 -1 4 0 2 1 0 2 -2 1 -4 0 -2 1 0 2 2 1 4 0 2 -1m2 -7" horiz-adv-x="10.0" unicode="S"/>
+      <glyph d="m0 8l8 0 -4 0 0 -8m6 0" horiz-adv-x="10.0" unicode="T"/>
+      <glyph d="m0 8l0 -7 2 -1 4 0 2 1 0 7m2 -8" horiz-adv-x="10.0" unicode="U"/>
+      <glyph d="m0 8l4 -8 4 8m2 -8" horiz-adv-x="10.0" unicode="V"/>
+      <glyph d="m0 8l2 -8 2 6 2 -6 2 8m2 -8" horiz-adv-x="10.0" unicode="W"/>
+      <glyph d="m0 0l8 8 -4 -4 -4 4 8 -8m2 0" horiz-adv-x="10.0" unicode="X"/>
+      <glyph d="m0 8l4 -4 4 4 -4 -4 0 -4m6 0" horiz-adv-x="10.0" unicode="Y"/>
+      <glyph d="m0 8l8 0 -8 -8 8 0m2 0" horiz-adv-x="10.0" unicode="Z"/>
+      <glyph d="m8 8l-4 0 0 -8 4 0m2 0" horiz-adv-x="10.0" unicode="["/>
+      <glyph d="m0 8l8 -8m2 0" horiz-adv-x="10.0" unicode="\"/>
+      <glyph d="m0 0l4 0 0 8 -4 0m10 -8" horiz-adv-x="10.0" unicode="]"/>
+      <glyph d="m2 7l2 1 2 -1m4 -7" horiz-adv-x="10.0" unicode="^"/>
+      <glyph d="m0 -1l12 0m-2 1" horiz-adv-x="12.0" unicode="_"/>
+      <glyph d="m4 8l2 -2m4 -6" horiz-adv-x="10.0" unicode="`"/>
+      <glyph d="m8 1l-4 -1 -2 0 -2 1 0 3 4 1 4 0 0 -5m2 0" horiz-adv-x="10.0" unicode="a"/>
+      <glyph d="m0 8l0 -8 6 0 2 1 0 3 -2 1 -6 0m10 -5" horiz-adv-x="10.0" unicode="b"/>
+      <glyph d="m8 4l-2 1 -4 0 -2 -1 0 -3 2 -1 4 0 2 1m2 -1" horiz-adv-x="10.0" unicode="c"/>
+      <glyph d="m8 8l0 -8 -6 0 -2 1 0 3 2 1 6 0m2 -5" horiz-adv-x="10.0" unicode="d"/>
+      <glyph d="m0 2l8 0 0 2 -2 1 -4 0 -2 -1 0 -3 2 -1 6 0m2 0" horiz-adv-x="10.0" unicode="e"/>
+      <glyph d="m2 0l0 4 -2 0 6 0 -4 0 0 3 2 1 2 0 2 -1m2 -7" horiz-adv-x="10.0" unicode="f"/>
+      <glyph d="m0 -3l4 -1 2 0 2 1 0 8 0 -1 -4 1 -2 0 -2 -1 0 -3 2 -1 6 0m2 0" horiz-adv-x="10.0" unicode="g"/>
+      <glyph d="m0 0l0 8 0 -3 6 0 2 -1 0 -4m2 0" horiz-adv-x="10.0" unicode="h"/>
+      <glyph d="m4 7l0 0m-2 -2l2 0 0 -5 -2 0 4 0m4 0" horiz-adv-x="10.0" unicode="i"/>
+      <glyph d="m0 -3l2 -1 4 0 2 1 0 8m0 2l0 0m2 -7" horiz-adv-x="10.0" unicode="j"/>
+      <glyph d="m0 8l0 -8 0 3 8 2 -4 -1 4 -4m2 0" horiz-adv-x="10.0" unicode="k"/>
+      <glyph d="m2 8l2 0 0 -8 -2 0 4 0m4 0" horiz-adv-x="10.0" unicode="l"/>
+      <glyph d="m0 0l0 5 0 -1 4 1 0 -5 0 4 4 1 0 -5m2 0" horiz-adv-x="10.0" unicode="m"/>
+      <glyph d="m0 0l0 5 0 -1 6 1 2 -1 0 -4m2 0" horiz-adv-x="10.0" unicode="n"/>
+      <glyph d="m2 0l-2 1 0 3 2 1 4 0 2 -1 0 -3 -2 -1 -4 0m8 0" horiz-adv-x="10.0" unicode="o"/>
+      <glyph d="m0 -4l0 9 6 0 2 -1 0 -3 -2 -1 -6 0m10 0" horiz-adv-x="10.0" unicode="p"/>
+      <glyph d="m8 -4l0 9 0 -1 -4 1 -2 0 -2 -1 0 -3 2 -1 6 0m2 0" horiz-adv-x="10.0" unicode="q"/>
+      <glyph d="m0 0l0 5 0 -1 4 1 2 0 2 -1m2 -4" horiz-adv-x="10.0" unicode="r"/>
+      <glyph d="m0 1l2 -1 4 0 2 1 0 1 -8 1 0 1 2 1 4 0 2 -1m2 -4" horiz-adv-x="10.0" unicode="s"/>
+      <glyph d="m0 5l6 0 -4 0 0 2 0 -6 2 -1 2 0 2 1m2 -1" horiz-adv-x="10.0" unicode="t"/>
+      <glyph d="m0 5l0 -4 2 -1 4 0 2 1 0 4m2 -5" horiz-adv-x="10.0" unicode="u"/>
+      <glyph d="m0 5l4 -5 4 5m2 -5" horiz-adv-x="10.0" unicode="v"/>
+      <glyph d="m0 5l2 -5 2 5 2 -5 2 5m2 -5" horiz-adv-x="10.0" unicode="w"/>
+      <glyph d="m0 0l8 5m-8 0l8 -5m2 0" horiz-adv-x="10.0" unicode="x"/>
+      <glyph d="m0 -4l4 4 -4 5 4 -5 4 5m2 -5" horiz-adv-x="10.0" unicode="y"/>
+      <glyph d="m0 5l8 0 -8 -5 8 0m2 0" horiz-adv-x="10.0" unicode="z"/>
+      <glyph d="m8 8l-2 -1 0 -2 -2 -1 2 -1 0 -2 2 -1m2 0" horiz-adv-x="10.0" unicode="{"/>
+      <glyph d="m0 8l0 -8m10 0" horiz-adv-x="10.0" unicode="|"/>
+      <glyph d="m0 0l2 1 0 2 2 1 -2 1 0 2 -2 1m10 -8" horiz-adv-x="10.0" unicode="}"/>
+      <glyph d="m0 6l2 1 4 -1 2 1m2 -7" horiz-adv-x="10.0" unicode="~"/>
+    </font>
+  </defs>
+</svg>
