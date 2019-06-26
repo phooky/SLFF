@@ -16,7 +16,6 @@ def add_bounds(b1,b2):
 for glyph in sfont.glyph_map.values():
     total_bounds = add_bounds(total_bounds,glyph.bounds)
 
-print("total bounds {}".format(total_bounds))
 em_width = sfont.glyph_map['m'].bounds[2]
 space_width = sfont.glyph_map[' '].bounds[2]
 
@@ -24,6 +23,7 @@ space_width = sfont.glyph_map[' '].bounds[2]
 impl = xml.dom.minidom.getDOMImplementation('')
 doctype = impl.createDocumentType('svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd')
 d = impl.createDocument('http://www.w3.org/2000/svg','svg',doctype)
+defs = d.createElement('defs')
 f = d.createElement('font')
 f.setAttribute('id',sfont.name)
 ff = d.createElement('font-face')
@@ -35,5 +35,12 @@ f.appendChild(ff)
 mg = d.createElement('missing-glyph')
 mg.setAttribute('horiz-adv-x',str(space_width))
 f.appendChild(mg)
-d.documentElement.appendChild(f)
+for (key, glyph) in sfont.glyph_map.items():
+    g = d.createElement('glyph')
+    g.setAttribute('unicode',key)
+    g.setAttribute('horiz-adv-x',str(glyph.bounds[2]))
+    g.setAttribute('d',glyph.path)
+    f.appendChild(g)
+defs.appendChild(f)
+d.documentElement.appendChild(defs)
 d.writexml(sys.stdout,newl='\n',addindent='  ')
