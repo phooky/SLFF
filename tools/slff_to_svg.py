@@ -17,6 +17,9 @@ for glyph in sfont.glyph_map.values():
     total_bounds = add_bounds(total_bounds,glyph.bounds)
 
 print("total bounds {}".format(total_bounds))
+em_width = sfont.glyph_map['m'].bounds[2]
+space_width = sfont.glyph_map[' '].bounds[2]
+
 
 impl = xml.dom.minidom.getDOMImplementation('')
 doctype = impl.createDocumentType('svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd')
@@ -25,4 +28,12 @@ f = d.createElement('font')
 f.setAttribute('id',sfont.name)
 ff = d.createElement('font-face')
 ff.setAttribute('font-family',sfont.name)
-
+ff.setAttribute('units-per-em',str(em_width))
+ff.setAttribute('ascent',str(total_bounds[1]))
+ff.setAttribute('descent',str(total_bounds[3]))
+f.appendChild(ff)
+mg = d.createElement('missing-glyph')
+mg.setAttribute('horiz-adv-x',str(space_width))
+f.appendChild(mg)
+d.documentElement.appendChild(f)
+d.writexml(sys.stdout,newl='\n',addindent='  ')
