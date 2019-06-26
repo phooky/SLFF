@@ -16,8 +16,20 @@ def add_bounds(b1,b2):
 for glyph in sfont.glyph_map.values():
     total_bounds = add_bounds(total_bounds,glyph.bounds)
 
-em_width = sfont.glyph_map['m'].bounds[2]
-space_width = sfont.glyph_map[' '].bounds[2]
+em_width = total_bounds[2]
+space_width = total_bounds[2]
+
+for emchar in 'mM ':
+    try:
+        em_width = sfont.glyph_map[emchar].bounds[2]
+        break
+    except KeyError:
+        sys.stderr.write("Couldn't use '{}' for em\n".format(emchar))
+
+try:
+    space_width = sfont.glyph_map[' '].bounds[2]
+except KeyError:
+    sys.stderr.write("Couldn't use space for horiz advance\n")
 
 
 impl = xml.dom.minidom.getDOMImplementation('')
@@ -39,7 +51,11 @@ for (key, glyph) in sfont.glyph_map.items():
     g = d.createElement('glyph')
     g.setAttribute('unicode',key)
     g.setAttribute('horiz-adv-x',str(glyph.bounds[2]))
-    g.setAttribute('d',glyph.path)
+    # SVG fonts want a move command first, I guess
+    path = glyph.path
+    if path[0] == 'l':
+        path = 'm0 0'+path
+    g.setAttribute('d',path)
     f.appendChild(g)
 defs.appendChild(f)
 d.documentElement.appendChild(defs)
